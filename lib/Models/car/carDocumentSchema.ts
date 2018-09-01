@@ -19,4 +19,4 @@ let carSchema = new mongoose.Schema(
     }
 );
 
-export let Property: mongoose.Model<ICarDocument> = mongoose.model<ICarDocument>("car", carSchema);
+export let Car: mongoose.Model<ICarDocument> = mongoose.model<ICarDocument>("car", carSchema);
