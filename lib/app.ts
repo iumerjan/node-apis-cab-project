@@ -4,7 +4,6 @@ import * as mongoose from "mongoose";
 import { Routes } from "./routes/carRoutes";
 
 class App {
-
     public app: express.Application;  
     public routePrv: Routes = new Routes();
 

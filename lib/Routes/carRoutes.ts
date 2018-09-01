@@ -4,12 +4,14 @@ export class Routes {
 
     public carController: CarController = new CarController();
     public routes(app): void {
-        
+
         var upload = multer({ dest: './FileStore/' });
         // Add a new car
         app.route('/api/car')
-            .post(upload.any(),this.carController.addNewCar);
-       
+            .post(upload.any(), this.carController.addNewCar);
+
+
+
         // Get all cars
         app.route('/api/car')
             .get(this.carController.getCars);

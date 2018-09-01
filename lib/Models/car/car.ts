@@ -13,5 +13,6 @@ export interface ICar {
         unique_file_name: string,
         size: number,
         path: string,
+
     }>,
 }

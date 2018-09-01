@@ -23,7 +23,6 @@ export class CarController {
                 res.status(409).send({ message: `The car with the ${doc.car_number} already exists!` });
             }
             else {
-
                 var uploadedFiles = req["files"];
                 var dir = './FileStore';
                 // newCar.car_image = req["files"]["path"];
@@ -92,7 +91,7 @@ export class CarController {
             if (err) {
                 res.send(err);
             }
-           
+
             return res.status(200).send(doc);
         });
     }
@@ -107,7 +106,7 @@ export class CarController {
         });
     }
 
-    
+
 
     // Soft delete a car
     // using PATCH verb because we have to change a flag only for soft delete

@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "0a9ded09-612a-44ab-90cf-a79bee7c022d",
-		"name": "car-rental",
+		"name": "car-rental-service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
