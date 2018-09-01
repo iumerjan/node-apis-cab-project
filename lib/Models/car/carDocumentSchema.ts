@@ -1,7 +1,6 @@
 
 import * as mongoose from "mongoose";
 import { ICarDocument } from "./carDocument";
-import { Schema } from "mongoose";
 
 let carSchema = new mongoose.Schema(
     {
@@ -12,7 +11,16 @@ let carSchema = new mongoose.Schema(
         rate: Number,
         color: String,
         car_type: String,
-
+        is_deleted: {
+            type: Boolean,
+            default: false
+        }, // used for soft deletion of car
+        images: [{
+            original_file_name: String,
+            unique_file_name: String,
+            size: Number,
+            path: String
+        }],
     },
     {
         timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }

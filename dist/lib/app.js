@@ -2,13 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const bodyParser = require("body-parser");
+const carRoutes_1 = require("./routes/carRoutes");
 class App {
     constructor() {
-        this.mongoUrl = 'mongodb://localhost/cab-rentaldb';
+        this.routePrv = new carRoutes_1.Routes();
         this.app = express();
         this.config();
         this.enableCORS();
-        //this.mongoSetup();  
+        this.routePrv.routes(this.app);
     }
     enableCORS() {
         // Allow CORS
@@ -19,15 +20,11 @@ class App {
             next();
         });
     }
-    // private mongoSetup(): void{
-    //     mongoose.Promise = global.Promise;
-    //     mongoose.connect(this.mongoUrl);    
-    // }
     config() {
         // support application/json type post data
-        this.app.use(bodyParser.json());
+        this.app.use(bodyParser.json({ limit: "50mb" }));
         //support application/x-www-form-urlencoded post data
-        this.app.use(bodyParser.urlencoded({ extended: false }));
+        this.app.use(bodyParser.urlencoded({ extended: true }));
     }
 }
 exports.default = new App().app;

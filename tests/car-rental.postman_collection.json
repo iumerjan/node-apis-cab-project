@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "0a9ded09-612a-44ab-90cf-a79bee7c022d",
+		"name": "car-rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "car-rental.addNewCar",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "MARUTI 800 AC",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "car_number",
+							"value": "JK01F 1395",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "2000",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "rate",
+							"value": "20",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "GREEN",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "number_of_seats",
+							"value": "4",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "car_image",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-car-by-ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/car/5b8a4de6019373194063280a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"car",
+						"5b8a4de6019373194063280a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-car",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"scorpio\",\n\t\"model\":2014,\n\t\"car_number\": \"jk01x 3523\",\n\t\"number_of_seats\":\"4\",\n\n\t\"color\":\"black\",\n\t\"car_type\":\"suv\"\n\t\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/car/5b8a4de6019373194063280a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"car",
+						"5b8a4de6019373194063280a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove-car",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/car/5b8a4de6019373194063280a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"car",
+						"5b8a4de6019373194063280a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
