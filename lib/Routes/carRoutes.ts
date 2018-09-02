@@ -4,9 +4,9 @@ export class Routes {
 
     public carController: CarController = new CarController();
     public routes(app): void {
-
-        var upload = multer({ dest: './FileStore/' });
+        
         // Add a new car
+        var upload = multer({ dest: './FileStore/' });
         app.route('/api/car')
             .post(upload.any(), this.carController.addNewCar);
 

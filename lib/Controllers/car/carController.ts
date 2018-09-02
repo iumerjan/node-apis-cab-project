@@ -2,7 +2,6 @@ import { Car } from '../../Models/car/carDocumentSchema';
 import * as mongoose from 'mongoose';
 import { Request, Response } from 'express';
 const express = require('express');
-
 const uuidv1 = require('uuid/v1');
 var path = require('path');
 var fs = require('fs');
@@ -105,8 +104,6 @@ export class CarController {
             return res.status(200).send(doc);
         });
     }
-
-
 
     // Soft delete a car
     // using PATCH verb because we have to change a flag only for soft delete
