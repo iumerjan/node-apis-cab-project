@@ -10,8 +10,6 @@ export class Routes {
         app.route('/api/car')
             .post(upload.any(), this.carController.addNewCar);
 
-
-
         // Get all cars
         app.route('/api/car')
             .get(this.carController.getCars);
