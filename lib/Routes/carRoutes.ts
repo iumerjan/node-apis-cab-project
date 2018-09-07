@@ -1,14 +1,12 @@
 import { CarController } from "../controllers/car/carController";
-const multer = require('multer');
 export class Routes {
 
     public carController: CarController = new CarController();
     public routes(app): void {
         
         // Add a new car
-        var upload = multer({ dest: './FileStore/' });
         app.route('/api/car')
-            .post(upload.any(), this.carController.addNewCar);
+            .post( this.carController.addNewCar);
 
         // Get all cars
         app.route('/api/car')

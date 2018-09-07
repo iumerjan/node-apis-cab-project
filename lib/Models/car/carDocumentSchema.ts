@@ -3,7 +3,7 @@ import { ICarDocument } from "./carDocument";
 
 let carSchema = new mongoose.Schema(
     {
-        name: String,
+        brand: String,
         car_number: String,
         model: String,
         number_of_seats: Number,
@@ -14,12 +14,7 @@ let carSchema = new mongoose.Schema(
             type: Boolean,
             default: false
         }, // used for soft deletion of car
-        images: [{
-            original_file_name: String,
-            unique_file_name: String,
-            size: Number,
-            path: String
-        }],
+        
     },
     {
         timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }

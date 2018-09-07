@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
 let carSchema = new mongoose.Schema({
-    name: String,
+    brand: String,
     car_number: String,
     model: String,
     number_of_seats: Number,
@@ -13,11 +13,6 @@ let carSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    images: [{
-            original_file_name: String,
-            unique_file_name: String,
-            size: Number
-        }],
 }, {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
 });
