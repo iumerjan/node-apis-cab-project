@@ -1,6 +1,10 @@
 # node-apis-cab-project
-car rental peer to peer service
-Build
+car rental peer to peer service.
+
+## Build
+
 Run tsc to build the project. The build artifacts will be stored in the dist/ directory. 
-Run server
+
+## Run server
+
 Run npm run dev for development and Run npm run prod for production
